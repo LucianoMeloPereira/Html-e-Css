@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* tenha no minimo 300px mas se der espaço pra crescer um pouco mais, adicionar 1fr
+    quando for menos de 400px quebre apenas pra 1 coluna  */
+    div {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 1rem;
+    }
+
+    .galeria {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      margin-top: 100px;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 400px) {
+      .minmax img {
+        /* grid-row: 2; */
+        order: 2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="minmax">
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <p>
+      A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem
+      equipada com os melhores acessórios, o que garante maior velocidade.
+    </p>
+  </div>
+  <div class="galeria">
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+    <img src="./img/bicicleta.jpg" alt="Bicicleta" />
+  </div>
+
+</body>
+
+</html>

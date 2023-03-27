@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 40px;
+    }
+
+    h1,
+    p {
+      margin: 0px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    p,
+    span {
+      font-size: 20px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      /* grid-template-rows: repeat(3, auto) 1fr; */
+      /* place-items: start; */
+      /* grid-template-rows: repeat(4, auto); */
+    }
+
+    .info {
+      display: grid;
+      place-items: start;
+    }
+
+
+    img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .foto {
+      /* grid-column: 1;
+      grid-row: 2/5; */
+    }
+
+    .comprar {
+      background: #a8f;
+      padding: 10px 20px;
+      color: #103;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 20px;
+      /* grid-column: 2; */
+
+    }
+
+    .preco {
+      background: #ddd;
+      padding: 5px;
+      border-radius: 5px;
+      /* grid-area: 2 / 2; */
+
+
+    }
+
+    .titulo {
+      grid-column: 1 / -1;
+    }
+
+    .descricao {
+      /* grid-column: 2; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid">
+    <h1 class="titulo">Nimbus Stark</h1>
+    <img class="foto" src="./img/bicicleta.jpg">
+    <div class="info">
+      <span class="preco">$39</span>
+      <p class="descricao">A nimbus stark é a melhor bikecraft já criada pela nossa equipe. ela vem equipada com os melhores acessorios, o que garante maior velocidade.</p>
+      <a class="comprar" href="/">comprar</a>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

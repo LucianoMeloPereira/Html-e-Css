@@ -1,0 +1,12 @@
+cd volta pastas
+mkdir cria pasta nova
+
+touch cria arquivo novo
+
+touch criarArquivoNovo/aquivoNovo.js
+
+como remover arquivo
+rm nomeDoArquimoASerRemovido
+
+remover pasta
+rm -r RemoverPasta

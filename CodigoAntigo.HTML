@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  
+  </style>
+</head>
+
+
+<body>
+ @model IList<ConfigProcSeletivoWeb.Queries.Cursos.ObterPedidosPorCampusVestibularQueryModel>
+<style>
+    .modal-content{ width: max-content;}
+    .lblTituloCurso{ 
+        color:white;    
+        vertical-align: middle !important;       
+    }
+
+.custom-switch {
+     padding-left: 2.25rem;
+}
+ .custom-control {
+     position: relative;
+     z-index: 1;
+     display: block;
+     min-height: 1.5rem;
+     padding-left: 1.5rem;
+     -webkit-print-color-adjust: exact;
+     color-adjust: exact;
+}
+ .custom-control-input {
+     position: absolute;
+     left: 0;
+     z-index: -1;
+     width: 1rem;
+     height: 1.25rem;
+     opacity: 0;
+}
+ .custom-control-label {
+     position: relative;
+     margin-bottom: 0;
+     vertical-align: top;
+}
+ .custom-switch .custom-control-label::before {
+     left: -2.25rem;
+     width: 1.75rem;
+     pointer-events: all;
+     border-radius: 0.5rem;
+}
+ .custom-control-label::before, .custom-file-label, .custom-select {
+     transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+ .custom-control-label::before {
+     position: absolute;
+     top: 0.25rem;
+     left: -1.5rem;
+     display: block;
+     width: 1rem;
+     height: 1rem;
+     pointer-events: none;
+     content: "";
+     background-color: #fff;
+     border: #adb5bd solid 1px;
+}
+ .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+     background-color: #fff;
+     -webkit-transform: translateX(0.75rem);
+     transform: translateX(0.75rem);
+}
+ .custom-switch .custom-control-label::after {
+     top: calc(0.25rem + 2px);
+     left: calc(-2.25rem + 2px);
+     width: calc(1rem - 4px);
+     height: calc(1rem - 4px);
+     background-color: #adb5bd;
+     border-radius: 0.5rem;
+     transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out;
+     transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+     transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out;
+}
+ .custom-control-label::after {
+     position: absolute;
+     top: 0.25rem;
+     left: -1.5rem;
+     display: block;
+     width: 1rem;
+     height: 1rem;
+     content: "";
+     background: 50%/50% 50% no-repeat;
+}
+ .custom-control-input:checked ~ .custom-control-label::before {
+     color: #fff;
+     border-color: #007bff;
+     background-color: #007bff;
+}
+ .custom-switch .custom-control-label::before {
+     left: -2.25rem;
+     width: 1.75rem;
+     pointer-events: all;
+     border-radius: 0.5rem;
+}
+ .custom-control-label::before, .custom-file-label, .custom-select {
+     transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+ .custom-control-label::before {
+     position: absolute;
+     top: 0.25rem;
+     left: -1.5rem;
+     display: block;
+     width: 1rem;
+     height: 1rem;
+     pointer-events: none;
+     content: "";
+     background-color: #fff;
+     border: #adb5bd solid 1px;
+}
+ [11:34] Wesley Pereira 
+/* for sm */
+ .custom-switch.custom-switch-sm .custom-control-label {
+     padding-left: 1rem;
+     padding-bottom: 1rem;
+}
+ .custom-switch.custom-switch-sm .custom-control-label::before {
+     height: 1rem;
+     width: calc(1rem + 0.75rem);
+     border-radius: 2rem;
+}
+ .custom-switch.custom-switch-sm .custom-control-label::after {
+     width: calc(1rem - 4px);
+     height: calc(1rem - 4px);
+     border-radius: calc(1rem - (1rem / 2));
+}
+ .custom-switch.custom-switch-sm .custom-control-input:checked ~ .custom-control-label::after {
+     transform: translateX(calc(1rem - 0.25rem));
+}
+/* for md */
+ .custom-switch.custom-switch-md .custom-control-label {
+     padding-left: 2rem;
+     padding-bottom: 1.5rem;
+}
+ .custom-switch.custom-switch-md .custom-control-label::before {
+     height: 1.5rem;
+     width: calc(2rem + 0.75rem);
+     border-radius: 3rem;
+}
+ .custom-switch.custom-switch-md .custom-control-label::after {
+     width: calc(1.5rem - 4px);
+     height: calc(1.5rem - 4px);
+     border-radius: calc(2rem - (1.5rem / 2));
+}
+ .custom-switch.custom-switch-md .custom-control-input:checked ~ .custom-control-label::after {
+     transform: translateX(calc(1.5rem - 0.25rem));
+}
+/* for lg */
+ .custom-switch.custom-switch-lg .custom-control-label {
+     padding-left: 3rem;
+     padding-bottom: 2rem;
+}
+ .custom-switch.custom-switch-lg .custom-control-label::before {
+     height: 2rem;
+     width: calc(3rem + 0.75rem);
+     border-radius: 4rem;
+}
+ .custom-switch.custom-switch-lg .custom-control-label::after {
+     width: calc(2rem - 4px);
+     height: calc(2rem - 4px);
+     border-radius: calc(3rem - (2rem / 2));
+}
+ .custom-switch.custom-switch-lg .custom-control-input:checked ~ .custom-control-label::after {
+     transform: translateX(calc(2rem - 0.25rem));
+}
+/* for xl */
+ .custom-switch.custom-switch-xl .custom-control-label {
+     padding-left: 4rem;
+     padding-bottom: 2.5rem;
+}
+ .custom-switch.custom-switch-xl .custom-control-label::before {
+     height: 2.5rem;
+     width: calc(4rem + 0.75rem);
+     border-radius: 5rem;
+}
+ .custom-switch.custom-switch-xl .custom-control-label::after {
+     width: calc(2.5rem - 4px);
+     height: calc(2.5rem - 4px);
+     border-radius: calc(4rem - (2.5rem / 2));
+}
+ .custom-switch.custom-switch-xl .custom-control-input:checked ~ .custom-control-label::after {
+     transform: translateX(calc(2.5rem - 0.25rem));
+}
+ 
+
+</style>
+@{
+     var area_principal = "Assessor";
+}
+
+
+@using (Html.BeginForm("Index", "Cursos",new {Areas = area_principal }, FormMethod.Post))
+{   
+    <table class="table table-responsive-xl table-striped tbl_pedidos_cursos">
+        <thead>
+            <tr class="cls_Alinhamento_Esquerda">
+                <th colspan="5">
+                    
+                        <div class="row" >
+                           <div class="container-fluid d-flex">
+                                <div class="col lblTituloCurso ">Curso</div>
+                                <div class="col lblTituloCurso "><span id="rptCurso_lblTituloLibVest">Decisão do assessor</span></div>
+                                <div class="col  lblTituloCurso "><span id="rptCurso_lblTituloPedido">Pedido de liberação</span></div>
+                                <div class="col  lblTituloCurso "><span style="margin-bottom: 0px;">Laboratório de aula prática</span></div>
+                            
+                                <div class="col  lblTituloCurso custom-control custom-switch custom-switch-md">
+                                     <input type="checkbox" class="custom-control-input" id="checkBloqueiaCursoGeral">
+                                      <label for="checkBloqueiaCursoGeral"  class="  custom-control-label form-check-label">Bloquear todos os cursos</label>
+                                </div>
+                           </div>
+                        </div>
+                    
+                
+                </th>
+            </tr>
+        </thead>
+        <tbody>            
+
+                @foreach (var item in Model)
+                {                       
+                   <tr class="@(item.TemDadosPraticas == true  && item.CodStatusPedidoVestibular == 1  &&  item.CodTipoUsuario != 16 ? "cls-cursoSelecionado" : "")">                                                                   
+                        <td colspan="5">
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].SiglaInstituto" value="@item.SiglaInstituto.Trim()" />                            
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodCursoVestibular" value="@item.CodCursoVestibular" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodCampus" value="@item.CodCampus" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodVestibular" value="@item.CodVestibular" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodTipoUsuario" value="@item.CodTipoUsuario" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodStatusPedidoVestibular" value="@item.CodStatusPedidoVestibular" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].HabilitadoPraticas" value="@item.HabilitadoPraticas.ToString()" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].TemDadosPraticas" value="@item.TemDadosPraticas.ToString()" />                        
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].Modalidade" value="@item.Modalidade.Trim()" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].HabilitadoSolicitacao" value="@item.HabilitadoSolicitacao.ToString()" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].TemDadosSolicitacao" value="@item.TemDadosSolicitacao.ToString()" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].LYC_CURSO_VEST" value="@item.LYC_CURSO_VEST" />
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].LY_UNIDADE_VEST" value="@item.LY_UNIDADE_VEST" class="cls_hidden_LY_UNIDADE_VEST" />                            
+                            <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodTipoLaboratorio" value="@(item.TemDadosPraticas == true ? item.CodTipoLaboratorio : "")" class="cls_hidden_CodTipoLaboratorio" />
+                            @if(item.TemDadosPraticas == true)
+                            {
+                                if(item.CodTipoLaboratorio == 1)
+                                {
+                                    <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodCampusLaboratorio" value="@(item.LY_UNIDADE_VEST)" class="cls_hidden_CodCampusLaboratorio" />
+                                }
+                                else{
+                                    <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodCampusLaboratorio" value="@(item.CodCampusLaboratorio)" class="cls_hidden_CodCampusLaboratorio" />
+                                }                                
+                            }
+                            else
+                            {
+                                <input type="hidden" name="model_cursos[@(Model.IndexOf(item))].CodCampusLaboratorio"  class="cls_hidden_CodCampusLaboratorio" />
+                            }                            
+                                                    
+                            <div class="row">
+
+                                    @if (new[] { 5, 6 }.Contains(item.CodStatusPedidoVestibular))
+                                    {
+                                        <div class="col-3 w-25"> 
+                                            @if (item.CodTipoUsuario == 29)
+                                            {
+                                                @if (!new[] { 5, 6 }.Contains(item.CodStatusPedidoVestibular))
+                                                {
+                                                    @if (new[] { 0, 1, 3, 4 }.Contains(item.CodStatusPedidoVestibular))
+                                                    {
+                                                        <input id="checkBloqueiaCursoGeral_@item.CodCursoVestibular" type="checkbox" name="checkBloqueiaCursoGeral" class="checkBloqueiaCursoGeral" @(item.CodStatusPedidoVestibular == 4 ? "checked=checked value=true" : "value=false") >
+                                                    }
+                                                }
+                                            }
+                                            <small>@Html.DisplayFor(modelItem => item.NomeCurso)</small>
+                                        </div>
+                                        <div class="col-9 w-25"><span id="pedido_liberacao_@item.CodCursoVestibular" class="pedido_liberacao @item.cls_Pedido_liberacao">@item.Texto_Pedido_liberacao</span></div>
+                                    }
+                                    else
+                                    {
+                                        <div class="col">
+                                              @if (item.CodTipoUsuario == 29)
+                                            {
+                                                @if (!new[] { 5, 6 }.Contains(item.CodStatusPedidoVestibular))
+                                                {
+                                                    @if (new[] { 0, 1, 3, 4 }.Contains(item.CodStatusPedidoVestibular))
+                                                    {
+                                                        <input id="checkBloqueiaCursoGeral_@item.CodCursoVestibular" type="checkbox" name="checkBloqueiaCursoGeral" class="checkBloqueiaCursoGeral" @(item.CodStatusPedidoVestibular == 4 ? "checked=checked value=true" : "value=false")  >
+                                                    }
+                                                }
+                                            }
+                                            <small>@Html.DisplayFor(modelItem => item.NomeCurso)</small>
+                                        </div>
+                                        <div class="col">
+                                             @if (!new[] { 3, 4, 0 }.Contains(item.CodStatusPedidoVestibular) || item.CodTipoUsuario == 29)
+                                            {
+                                                if (item.CodTipoUsuario != 16)
+                                                {
+                                                    <input id="checkHabilitaPs_@item.CodCursoVestibular"   type="checkbox" name="model_cursos[@(Model.IndexOf(item))].checkhabilitaps" class="checkHabilitaPs" @(item.CodStatusPedidoVestibular == 1 ? "checked=checked value=true" : "value=false")>
+                                                }
+                                            }
+                                            <span id="descisao_assessor_@item.CodCursoVestibular" class="@item.cls_DecisaoAssessor">@item.TextoDecisaoAssessor</span>
+                                              @if (item.HabilitadoSolicitacao == true && item.CodTipoUsuario != 16 && item.CodStatusPedidoVestibular != 1 && item.CodStatusPedidoVestibular != 3)
+                                                {
+                                                    @if (item.TemDadosSolicitacao)
+                                                    {
+                                                        <div class="">                                                           
+                                                            <a id="Curso_listSolicitacoes_@item.CodCursoVestibular" class="listaSolicitacoes btn btn-primary w-100 mt-2" data-toggle="modal" data-target="#modalExemplo" onclick="javascript:ObterDocumentacaoEnviada(@item.CodVestibular,@item.CodCampus,@item.CodCursoVestibular);" href="#">Solicitações enviadas</a>
+                                                        </div>
+                                                    }
+                                                    <div id="div_Curso_fileupload_@item.CodCursoVestibular" class="file-upload">
+                                                        <input type="file" name="ArqDocSolicitacao" class="cls-ArqDocSolicitacao custom-file-input" accept="application/pdf,.doc,.docx,.ppt,.pptx" data-codvestibular="@item.CodVestibular" data-codcampus="@item.CodCampus" data-codcursovestibular="@item.CodCursoVestibular" data-LyCursoVest="@item.LYC_CURSO_VEST">
+                                                        <div class="btn btn-danger w-100"><i class="fas fa-upload"></i> Carregar arquivo</div>
+                                                    </div>
+                                                }
+                                        </div>
+                                        <div class="col">
+                                            @if (!new[] { 3, 4 }.Contains(item.CodStatusPedidoVestibular))
+                                            {
+                                                @if (item.CodTipoUsuario == 18 && item.CodStatusPedidoVestibular == 2)
+                                                {
+
+                                                }
+                                                else
+                                                {
+                                                    <input id="checkHabilitaCursoPolo_@item.CodCursoVestibular" name="model_cursos[@(Model.IndexOf(item))].checkHabilitaCursoPolo" class="checkHabilitaCursoPolo" type="checkbox" @(new[] {1, 2}.Contains(item.CodStatusPedidoVestibular) ? "checked=checked value=true" : "value=false") />
+                                                }
+                                            }
+                                            else if (new[] { 16, 29 }.Contains(item.CodTipoUsuario))
+                                            {
+                                                @if (item.CodStatusPedidoVestibular == 3)
+                                                {
+                                                    <input id="checkHabilitaCursoPolo_@item.CodCursoVestibular" name="model_cursos[@(Model.IndexOf(item))].checkHabilitaCursoPolo" class="checkHabilitaCursoPolo" type="checkbox" @(item.CodStatusPedidoVestibular == 1 ? "checked=checked value=true" : "value=false") />
+                                                }
+
+                                                @if (item.CodStatusPedidoVestibular == 4)
+                                                {
+                                                    <input id="checkHabilitaCursoPolo_@item.CodCursoVestibular" name="model_cursos[@(Model.IndexOf(item))].checkHabilitaCursoPolo" class="checkHabilitaCursoPolo" type="checkbox" @(item.CodStatusPedidoVestibular == 1 ? "checked=checked value=true" : "value=false") disabled="disabled" />
+                                                }
+                                            }
+                                            <span id="Pedido_liberacao_@item.CodCursoVestibular" class="@item.cls_Pedido_liberacao">@item.Texto_Pedido_liberacao</span>
+                                        </div>
+                                    <div class="col"></div>
+                                    <div class="col">
+                                        <div class="row" style="/*display: -webkit-inline-box;*/">
+                                            @if(item.Modalidade == "SEPI" && item.HabilitadoPraticas == true && item.TemDadosPraticas && item.CodStatusPedidoVestibular == 1)
+                                            {
+                                                <div class="col">
+                                                    @*<button class="btn btn-secondary btn-atulizar-vagas" onclick="javascript:AtualizarVagas(@item.CodVestibular,@item.CodCampus,@item.CodCursoVestibular, @item.Ly_Curso_Vest,this,@item.LY_UNIDADE_VEST);" style="float:right">Atualizar vagas</button>*@
+                                                    <a class="btn btn-secondary btn-atulizar-vagas" src="#" onclick="javascript:AtualizarVagas(@item.CodVestibular,@item.CodCampus,@item.CodCursoVestibular, @item.Ly_Curso_Vest,this,@item.LY_UNIDADE_VEST);" style="margin-bottom: 1rem;  /*float:right*/">Atualizar vagas </a>
+                                                 </div>  
+                                            }
+                                            @if (item.CodStatusPedidoVestibular != 3)
+                                            {
+                                                <div  class="col pl-4" >
+                                                    <input type="button" class="btn btn-primary btn-alterar-curso" onclick="javascript:AlterarStatusCurso(@item.CodVestibular,@item.CodCampus,@item.CodCursoVestibular,@item.CodStatusPedidoVestibular,@item.CodTipoUsuario,this);" style="float:left;min-width:6rem; " value="Alterar">
+                                                </div>
+                                            }
+                                    </div>
+                                        </div>                                    
+                                        <div class="w-100"></div>
+                                        <div class="col-12">                                   
+                                                @if (item.Modalidade == "SEPI" && item.HabilitadoPraticas == true && item.CodTipoUsuario != 16 && item.CodStatusPedidoVestibular == 1)
+                                                {                                                                                                                                                                                                                                                                   
+                                                    <div class="row">
+                                              
+                                                        @if (item.TemDadosPraticas)
+                                                        {                                                   
+                                                                <div class="div-ConfigCursoSaudeVagas col-md-6 @(item.CodTipoLaboratorio == 2 ? "d-block" :"d-none")" >
+                                                                    <label>Selecione a unidade onde irão ocorrer as aulas práticas de laboratório:</label><br>
+                                                                    @Html.DropDownList("model_cursos["+ Model.IndexOf(item)+"].CodCampusLaboratorio",new SelectList(ViewBag.ListaLaboratorio, "Ly_Unidade_Vest", "Nome_Comp", item.CodCampusLaboratorio.ToString()),new { @class = "cls-unidade-Vagas Sel-unidade-Vagas form-control"})
+                                                                </div>
+                                                   
+                                                                 <div class="cls-lab-prop col-md-6 @(item.CodTipoLaboratorio == 1 ? "d-block" :"d-none")"  >
+                                                                    <label>As aulas práticas ocorrerão no laboratório próprio:</label><br>
+                                                                    <input type="text" class="cls-lab-prop form-control" name="model_cursos[@(Model.IndexOf(item))].CodCampusLaboratorio" value="@item.NomePolo" disabled="disabled">
+                                                                </div>                                                   
+                                                        }
+                                                        else
+                                                        {   
+                                                            <div class="div-ConfigCursoSaudeVagas col-md-6">
+                                                                <label>Selecione a unidade onde irão ocorrer as aulas práticas de laboratório:</label><br>
+                                                                @Html.DropDownList("model_cursos["+ Model.IndexOf(item)+"].CodCampusLaboratorio",new SelectList(ViewBag.ListaLaboratorio, "Ly_Unidade_Vest", "Nome_Comp", "Selecione"),new { @class = "cls-unidade-Vagas Sel-unidade-Vagas form-control"})
+                                                            </div>
+                                                        }                                                                                                                                               
+                                                        <div class="div-ConfigQuantVagas col-md-2" style="display: inline-block;">
+                                                            <label>Nº de vagas</label>
+                                                            <input type="number" name="model_cursos[@(Model.IndexOf(item))].Quantidade" class="cls-qtdVagas form-control" style="width: 90px;" value="@(item.TemDadosPraticas == true  ? item.Quantidade : "")">
+                                                        </div>
+
+                                                        <div class="col-md-4">
+                                                             <div class="row">
+                                                            <div class="col div-ConfigCursoSaudeLaboratorio d-block text-nowrap">
+                                                                <label>As aulas práticas em laboratório serão realizadas:</label>
+                                                                <br>
+                                                            </div>
+                                                        </div>      
+                                                            <div class="row">
+                                                                <div class="" style="display: inline-table;">
+                                                                    <input type="radio" name="lab_@item.CodCursoVestibular.ToString()" class="clsRadioLabolatorio" value="1" @(item.TemDadosPraticas == true && item.CodTipoLaboratorio == 1 ? "checked=checked" : "")>&nbsp; No próprio polo
+                                                                </div>
+                                                                <div class="ml-md-4"  style="display: inline-table;">
+                                                                    <input type="radio" name="lab_@item.CodCursoVestibular.ToString()" class="clsRadioLabolatorio" value="2" @(item.TemDadosPraticas == true && item.CodTipoLaboratorio == 2 ? "checked=checked" : "")>&nbsp; Na Unip/Associada
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    @if (item.AtualizadaRecentemente)
+                                                    {
+                                                        <div class="w-100"></div>
+                                                        <div class="row">
+                                                        <div class="col-12 mt-3 div-retorno-lyceum" style="display: block;">
+                                                                <span class="cls-retorno-lyceum d-block alert alert-danger">                                                                                    
+                                                                <span class="badge badge-danger mr-md-2" style="font-size:16px;">Atualização de vagas no Lyceum.</span><span>Não existe controle de vagas para o curso e polo informados.</span></span>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                }                                    
+                                        </div>                              
+                                    }                       
+                            </div>
+                        </td>
+                    </tr>          
+                }
+                <tr>
+                    <td colspan="7">
+                        <div id="button" class="offset-md-5">
+                            <input type="submit" name="btnAlterar" value="@(ViewBag.TipoUsuario == 16 ? "Altera Curso Polo" : "Alterar Cursos Coordenação")" id="btnAlterar" class="btn btn-primary mb-2" >
+                         </div>                  
+                    </td>
+                </tr>                
+        
+        </tbody>
+    </table>
+}
+
+<button type="button" class="btn btn-info btn-lg d-none" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<div class="modal fade bd-example-modal-lg" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Solicitações de desbloqueios</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <div class="conteudo-doc-solicitacao">
+            <ul class="list-unstyled">
+
+            </ul>
+        </div>
+        <div id="main"></div>
+        <textarea id="log"></textarea>
+        </div>
+        <div class="modal-footer">
+        <button type="button" onclick="return false;" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+    </div>
+    </div>
+</div>​
+
+<script type="text/javascript">
+  
+    $(function () {
+
+        $('#checkBloqueiaCursoGeral').change(function() {
+            if(this.checked) {
+                $(this).val(true);
+            }
+            else
+                $(this).val(false);      
+        });
+
+        $('.checkHabilitaCursoPolo').change(function() {
+            if(this.checked) {
+                $(this).val(true);
+            }
+            else
+                $(this).val(false);      
+        });
+       
+        $(".checkHabilitaPs").change(function() {
+            if(this.checked) {
+                $(this).val(true);
+            }
+            else
+                $(this).val(false);      
+        });
+
+        $(".spinner").hide();
+        $("#right_container").removeClass("d-none");
+        $("#right_container").addClass("d-block");
+        $('.cls-ArqDocSolicitacao').on('change', function (ev) {
+
+            let file = ev.target.files[0];
+
+            if (file) {
+                /*application/pdf,.doc,.docx,.ppt,.pptx*/
+                if (file.type !== "application/pdf" && file.type !== "application/msword" && file.type !== "application/vnd.openxmlformats-officedocument.wordprocessingml.document" && file.type !== "application/vnd.ms-powerpoint" && file.type !== "application/vnd.openxmlformats-officedocument.presentationml.presentation") {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Formato inválido, só aceitamos  .pdf, .ppt, .pptx, .doc e docx.',
+                        icon: 'error',
+                        confirmButtonText: 'Ok'
+                    })
+                }
+                else {
+                    swal.fire({
+                        title: 'Confirmação',
+                        text: "Deseja enviar o arquivo?",
+                        type: 'warning',
+                        icon: 'question',
+                        buttons: true,
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Sim',
+                        cancelButtonText: 'Não',
+                    }).then((result) => {
+                        if (result.value) {
+                            
+                            var codCursoVestibular_ = $(this).data("codcursovestibular");
+                            var codVestibular_ = $(this).data("codvestibular");
+                            var codCampus_ = $(this).data("codcampus");
+                            var lycursovest_ = $(this).data("lycursovest");
+
+                            var formData = new FormData();
+
+                            formData.append('file', ev.target.files[0]);
+
+                            $.ajax({
+                                type: 'post',
+                                url: '@Url.Action("UpLoadArquivo", "Documentos",new { Area = "" })?idVestibular=' + codVestibular_ + '&idCampus=' + codCampus_ + '&idCurso=' + codCursoVestibular_ + '&codCurso=' + lycursovest_,
+                                data: formData,
+                                success: function (status) {                                    
+                                    if (status == "200") {
+                                        $('.overlay').hide();
+                                        Swal.fire({
+                                            title: '',
+                                            html: 'Arquivo enviado com sucesso',
+                                            icon: 'success',
+                                            onClose: () => {
+                                                ObterPedidos(codCampus_, codVestibular_);
+                                            }
+                                        })
+                                    }
+                                    else {
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: '',
+                                            text: 'Erro!',
+                                            footer: 'Entre em contato com a equipe de desenvolvimento.'
+                                        });
+                                    }
+                                },
+                                processData: false,
+                                contentType: false,
+                                error: function () {
+
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: '',
+                                        text: 'Erro!',
+                                        footer: 'Entre em contato com a equipe de desenvolvimento.'
+                                    });
+                                }
+                            });
+                        }
+                        else {
+                            return false;
+                        }
+                    })
+                }
+            }
+        });
+
+         $(".clsRadioLabolatorio").click(function(){                          
+             var obj = $(this);
+             var objLaboratorio = $(this).parents("tr").eq(0);
+
+             if($(this).val() == 2)
+             {
+                objLaboratorio.find('.div-ConfigCursoSaudeVagas').addClass("d-block");
+                objLaboratorio.find('.div-ConfigCursoSaudeVagas').removeClass("d-none")
+                objLaboratorio.find('.cls-lab-prop').removeClass("d-block");
+                objLaboratorio.find('.cls-lab-prop').addClass("d-none");                
+                objLaboratorio.find('.cls_hidden_CodTipoLaboratorio').val($(this).val());
+                objLaboratorio.find('.cls_hidden_CodCampusLaboratorio').val(objLaboratorio.find('.cls-unidade-Vagas').val());                               
+             }
+
+             if($(this).val() == 1)
+             {
+                var val_campus = $("#dropPolosDisponiveis").val();
+                var text_campus = $("#dropPolosDisponiveis option:selected").html();
+                objLaboratorio.find('.div-ConfigCursoSaudeVagas').addClass("d-none");
+                objLaboratorio.find('.div-ConfigCursoSaudeVagas').removeClass("d-block");                
+                objLaboratorio.find('.cls-lab-prop input').remove();                
+                objLaboratorio.find('.cls-lab-prop').addClass("d-block").append("<input type='text' class='cls-lab-prop form-control' name='cls-lab-prop' value='" + text_campus + "' disabled/>");
+                objLaboratorio.find('.cls_hidden_CodTipoLaboratorio').val($(this).val());
+                objLaboratorio.find('.cls_hidden_CodCampusLaboratorio').val(objLaboratorio.find('.cls_hidden_LY_UNIDADE_VEST').val());                    
+             }
+         });
+    });
+
+    function ObterDocumentacaoEnviada(idVestibular_, idCampus_, idCurso_) {
+        $.get('@Url.Action("ObterSolicitacoesDeCursos", "Documentos",new { Area = "" })', { idVestibular: parseInt(idVestibular_), idCampus: parseInt(idCampus_),idCurso: parseInt(idCurso_)})
+        .done(function(content){              
+                $(".conteudo-doc-solicitacao").empty();                    
+                $(".conteudo-doc-solicitacao").html(content);
+        })
+        .fail(function(xhr, status, error) {                        
+              Swal.fire({
+                          icon: 'error',
+                          title: 'Erro:' + xhr.status,
+                          text: xhr.responseJSON.message/*,
+                          footer: '<a href="">Why do I have this issue?</a>'*/
+                        });
+        });    
+    }
+
+    function ObterArquivo(data, nome, tipo_arquivo) {        
+        var sampleArr = base64ToArrayBuffer(data);
+        saveByteArray(nome, sampleArr, tipo_arquivo);
+    }
+
+    
+    /* CONVERTE BASE64 TO BYTES */
+    function base64ToArrayBuffer(base64) {
+
+        var binaryString = window.atob(base64);
+        var binaryLen = binaryString.length;
+        var bytes = new Uint8Array(binaryLen);
+        for (var i = 0; i < binaryLen; i++) {
+            var ascii = binaryString.charCodeAt(i);
+            bytes[i] = ascii;
+        }
+        return bytes;
+    }
+
+    /* SALVA ARQUIVO NO BANCO */
+    function saveByteArray(reportName, byte, tipo_arquivo) {
+
+        /*pdf*/
+        if (tipo_arquivo == "application/pdf") {
+            var blob = new Blob([byte], { type: "application/pdf" });
+            var link = document.createElement('a');
+            var fileName = reportName + ".pdf";;
+        }
+
+        /*doc*/
+        if (tipo_arquivo == "application/msword") {
+            var blob = new Blob([byte], { type: "application/msword" });
+            var link = document.createElement('a');
+            var fileName = reportName + ".doc";;
+        }
+
+        /*docx*/
+        if (tipo_arquivo == "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+            var blob = new Blob([byte], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
+            var link = document.createElement('a');
+            var fileName = reportName + ".docx";;
+        }
+
+        /*ppt*/
+        if (tipo_arquivo == "application/vnd.ms-powerpoint") {
+            var blob = new Blob([byte], { type: "application/vnd.ms-powerpoint" });
+            var link = document.createElement('a');
+            var fileName = reportName + ".ppt";;
+        }
+
+        /*pptx*/
+        if (tipo_arquivo == "application/vnd.openxmlformats-officedocument.presentationml.presentation") {
+            var blob = new Blob([byte], { type: "application/vnd.openxmlformats-officedocument.presentationml.presentation" });
+            var link = document.createElement('a');
+            var fileName = reportName + ".pptx";;
+        }
+
+        if (navigator.appVersion.toString().indexOf('Edge') > 0) {
+            window.navigator.msSaveBlob(blob, fileName);
+        }
+
+        else {
+            link.href = window.URL.createObjectURL(blob);
+            link.download = fileName;
+            setTimeout(function () {
+                link.click();
+
+            }, 300);
+        }
+    };
+
+    function AlterarStatusCurso(idVestibular_,  idCampus_,  idCurso_,   codStatusPedidoVestibular_,   codTipoUsuario_,obj) {
+     
+        var objeto = $(obj);
+        var checkhabilitaps_ = $(obj).parents("tr").find(".checkHabilitaPs").val();
+        var checkhabilitacursopolo_ = $(obj).parents("tr").find(".checkHabilitaCursoPolo").val();     
+        var clsradiolabolatorio = $(obj).parents("tr").find(".clsRadioLabolatorio:checked").val();     
+
+         $.post('@Url.Action("AlterarStatusCurso", "Cursos",new { Area = area_principal })', { idVestibular: parseInt(idVestibular_), idCampus: parseInt(idCampus_),idCurso: parseInt(idCurso_), codStatusPedidoVestibular: parseInt(codStatusPedidoVestibular_), codTipoUsuario : parseInt(codTipoUsuario_), checkhabilitaps : checkhabilitaps_,  checkhabilitacursopolo: checkhabilitacursopolo_})
+        .done(function(content){              
+            ObterPedidos(idCampus_, idVestibular_);
+        })
+        .fail(function(xhr, status, error) {                        
+              Swal.fire({
+                          icon: 'error',
+                          title: 'Erro:' + xhr.status,
+                          text: xhr.responseJSON.message/*,
+                          footer: '<a href="">Why do I have this issue?</a>'*/
+                        });
+        });        
+    }
+
+    function AtualizarVagas (CodVestibular,CodCampus,CodCursoVestibular,Ly_Curso_Vest,obj,Ly_Unidade_Vest){    
+    
+        var qtVagas =$(obj).parents("tr").find(".cls-qtdVagas").val();
+        var codLaboratorio =$(obj).parents("tr").find(".Sel-unidade-Vagas").val();
+        var codTipoLaboratorio = $(obj).parents("tr").find('.clsRadioLabolatorio:checked').val();    
+
+        $.post('@Url.Action("SalvarVagas", "Cursos",new { Area = area_principal })', { idVestibular: parseInt(CodVestibular), idCampus: parseInt(CodCampus),idCurso: parseInt(CodCursoVestibular), qtVagas: parseInt(qtVagas), codLaboratorio : codLaboratorio, codCurso : Ly_Curso_Vest, codTipoLaboratorio : parseInt(codTipoLaboratorio), codPolo : Ly_Unidade_Vest })
+        .done(function(content){             
+            ObterPedidos(CodCampus, CodVestibular);
+        })
+        .fail(function(xhr, status, error) {                        
+              Swal.fire({
+                          icon: 'error',
+                          title: 'Erro:' + xhr.status,
+                          text: xhr.responseJSON.message/*,
+                          footer: '<a href="">Why do I have this issue?</a>'*/
+                        });
+        });
+    }
+    function VisualizarArquivo(data, nome, tipo_arquivo, callback) {
+        
+        var dados = "data:"+tipo_arquivo+";base64," + data; 
+
+      var img =  Base64ToImage(dados, function(img) { });       
+        document.getElementById('main').appendChild(img);
+        var log = "w=" + img.width + " h=" + img.height;
+        document.getElementById('log').value = log;
+
+    }
+
+    function Base64ToImage(base64img, callback) {
+       var img = new Image();
+       img.onload = function() {
+          callback(img);
+       };
+       img.src = base64img;
+
+       return img;
+    }  
+</script>
+
+</body>
+
+</html>
