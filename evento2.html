@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .texto {
+      display: none;
+    }
+
+    .texto.ativar {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Curso de Javascript</h1>
+  <button class="botao">Mais informações</button>
+  <p class="texto ">O curso de javacript é um curso completo com 60horas</p>
+
+
+  <script>
+    const botao = document.querySelector('.botao');
+
+    function mostrar() {
+      const texto = document.querySelector('.texto');
+      texto.classList.toggle('ativar');
+    }
+    botao.addEventListener('click', mostrar)
+  </script>
+</body>
+
+</html>

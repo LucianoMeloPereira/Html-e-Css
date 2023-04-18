@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .ativo {
+      margin-top: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul id="menu">
+      <li class="home"><a href="./">Home</a></li>
+      <li class="produtos"><a href="./">Produtos</a></li>
+    </ul>
+  </nav>
+
+
+  <script>
+    const nav = document.querySelector('nav');
+    const produtos = document.querySelector('.produtos a');
+    const home = document.querySelector('.home a')
+    console.log(produtos.innerHTML);
+    produtos.remove();
+
+    nav.style.backgroundColor = "gold";
+    nav.style.padding = "50px";
+    nav.classList.add("ativo");
+  </script>
+</body>
+
+</html>

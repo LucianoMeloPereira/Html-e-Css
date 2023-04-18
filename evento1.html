@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #botao {
+      display: inline-block;
+      padding: 10px;
+      background-color: #f8f;
+      margin-top: 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #botao:hover {
+      background-color: blueviolet;
+      color: white;
+      padding: 15px 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button class="ativar">Ativar botão</button>
+  <br>
+  <button href="./" id="botao">ativar botão</button>
+
+  <script>
+    //Selecionando o botão pela classe
+    const ativar = document.querySelector('.ativar');
+
+    //Função  para mostrar no console texto onde está clicando em um botão
+    /** @param {MouseEvent} event */
+    function ativarAoclick(event) {
+      console.log('Clicou em:', event.x);
+    }
+    //Ativando a função
+    ativar.addEventListener('click', ativarAoclick);
+
+    const elementoCorBotao = document.getElementById('botao');
+    function clickBotao() {
+      elementoCorBotao.style.backgroundColor = "#000";
+      elementoCorBotao.style.color = "white";
+    }
+
+    elementoCorBotao.addEventListener('click', clickBotao)
+  </script>
+</body>
+
+</html>
